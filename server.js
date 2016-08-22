@@ -11,6 +11,8 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   var size = +req.query.size;
+  if (size > 200) res.send('size < 200 pls')
+  if (size % 2) res.send('size must be odd')
   var seed = +req.query.seed;
   var board = bingoGenerator(bingoList.normal, {size, seed})
   res.render('index', {size, seed, board})
@@ -26,4 +28,4 @@ app.get('/bingo-popout', (req, res) => {
   res.render('bingo-popout', {size, row, goals})
 })
 
-app.listen(3000, () => console.log('listening'))
+app.listen(80, () => console.log('listening'))
