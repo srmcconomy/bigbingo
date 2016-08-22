@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
   var size = +req.query.size;
   if (size > 200) res.send('size < 200 pls')
-  if (size % 2) res.send('size must be odd')
+  if (size % 2 === 0) res.send('size must be odd')
   var seed = +req.query.seed;
   var board = bingoGenerator(bingoList.normal, {size, seed})
   res.render('index', {size, seed, board})
