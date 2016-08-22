@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OoT Bingo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <table class="bingo bingo-element">
+		<tr>
+			<td id="tlbr" class="header tlbr">TL-BR</td>
+      <% for (var i = 0; i < size; i++) { %>
+			<td id="col<%= i %>" class="header col<%= i %>">COL<%= i + 1 %></td>
+      <% } %>
+		</tr>
+    <% for (var i = 0; i < size; i++) { %>
+    <tr>
+      <td id="row<%= i %>" class="header row<%= i %>">ROW<%= i + 1 %></td>
+      <% for (var j = 0; j < size; j++) { %>
+      <td id="square<%= i * size + j %>" class="square row<%= i %> col<%= j %> <%= i === j ? "tlbr" : "" %> <%= i === size * size - 1 - j ? "bltr" : "" %>"><%= board[i * size + j + 1] %></td>
+      <% } %>
+    </tr>
+    <% } %>
+		<tr>
+			<td id="bltr" class="header bltr">BL-TR</td>
+		</tr>
+</table><div class="bingo-info">
+
+
+	<p class="medium">Seed: <%= seed %></p>
+	<p class="medium">Size: <%= size %></p>
+	<p class="medium">Permanent Link: http://www.srlbingo.com/bigbingo?size=<%= size %>&amp;seed=<%= seed %></p>
+	<p class="small">If popouts don't work, turn off your popup blocker.</p>
+</div>
+
+<script src="/js/bingo-board.js"></script>
+
+</body>
+</html>
