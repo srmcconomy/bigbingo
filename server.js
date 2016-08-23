@@ -5,6 +5,7 @@ require('ejs')
 const bingoGenerator = require('./7x7gen')
 const bingoList = require('./goal-list')
 
+app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.use(express.static('public'))
@@ -28,4 +29,5 @@ app.get('/bingo-popout', (req, res) => {
   res.render('bingo-popout', {size, row, goals})
 })
 
-app.listen(80, () => console.log('listening'))
+const port = process.env.PORT || 8081;
+app.listen(port, () => console.log('listening on ' + port))

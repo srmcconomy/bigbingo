@@ -74,7 +74,7 @@ $(function() {
 				}
 				var queryString = $.param(queryParams);
 				window.open(
-		        	'/bingo-popout?' + queryString,
+		        	'bingo-popout?' + queryString,
 		        	'_blank',
 		        	'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=220, height=460'
 		        );
