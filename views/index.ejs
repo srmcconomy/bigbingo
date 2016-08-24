@@ -19,7 +19,7 @@
     <tr>
       <td id="row<%= i %>" class="header row<%= i %>">ROW<%= i + 1 %></td>
       <% for (var j = 0; j < size; j++) { %>
-      <td id="square<%= i * size + j %>" class="square row<%= i %> col<%= j %> <%= i === j ? "tlbr" : "" %> <%= i === size * size - 1 - j ? "bltr" : "" %>"><%= board[i * size + j + 1] %></td>
+      <td id="square<%= i * size + j %>" class="square row<%= i %> col<%= j %> <%= i === j ? "tlbr" : "" %> <%= i === size - 1 - j ? "bltr" : "" %>"><%= board[i * size + j + 1] %></td>
       <% } %>
     </tr>
     <% } %>
