@@ -56,7 +56,7 @@ app.get('/bingo', (req, res) => {
 })
 
 app.get('/bingo-popout', (req, res) => {
-  let size = +req.query.size || defaults.size;
+  let size = 5;
   let row = req.query.rowName;
   let goals = []
   for (let i = 0; i < size; i++) {
