@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
+<body style="display:flex;flex-direction:column;align-items:center">
     <table class="bingo bingo-element">
 		<tr>
 			<td id="tlbr" class="header tlbr">TL-BR</td>
@@ -26,13 +26,21 @@
 		<tr>
 			<td id="bltr" class="header bltr">BL-TR</td>
 		</tr>
-</table><div class="bingo-info">
+</table><div class="bingo-info" style="display: inline-block">
 
+  <p class="small">If popouts don't work, turn off your popup blocker.</p>
+  <p class="small">BANNED TECHNIQUES: Deku Stick on B as adult, Hold R, GIM</p>
+  <p></p>
+  <p class="small">Beat Jabu-Jabu's Belly (no damage): If you take damage inside Jabu-Jabu's Belly, you must reset to your last save</p>
+  <p class="small">Finish with no shields: In order to finish your row, you must have no shields in your equipment screen</p>
+  <p class="small">Get to the end of any trial: You don't need to finish the trial by shooting a light arrow</p>
+  <p class="small">Get Fairy Bow with Iron Boots equipped: You must have Iron Boots equipped the entire time you are in the Forest Temple</p>
+  <p class="small">Beat the Fire Temple no Goron Tunic: You must not have Goron Tunic equipped at any time in the Fire Temple.  You may get the Goron Tunic and use it elsewhere</p>
+  <p class="small">8 unique unused keys in GTG (no damage): If you take damage inside Gerudo Training Grounds, you must reset to your last save</p>
+  <p class="small">Defeat 4 Bosses: "Bosses" include only Gohma, King Dodongo, Barinade, Phantom Ganon, Volvagia, Morpha, Bongo-Bongo, and Twinrova</p>
+  <p class="small">Beat the Shadow Temple no Hover Boots: You must not have Hover Boots equipped at any time in the Shadow Temple.  You may get the Hover Boots and use them elsewhere</p>
+  <p class="small">Break 6 walls in Dodongo's Cavern using Blue Fire: You may break walls by other means, but they do not count towards your 6</p>
 
-	<p class="medium">Seed: <%= seed %></p>
-	<p class="medium">Size: <%= size %></p>
-	<p class="medium">Permanent Link: http://bigbingo.prettybigjoe.me?size=<%= size %>&amp;seed=<%= seed %></p>
-	<p class="small">If popouts don't work, turn off your popup blocker.</p>
 </div>
 
 <script src="js/bingo-board.js"></script>
